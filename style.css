@@ -93,7 +93,7 @@ ul.styled-list li:last-child {
   transform: translateY(-10px);
 }
 
-footer {
+footer_ {
   background-color: #2980b9;
   color: white;
   text-align: center;
@@ -101,6 +101,17 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+  z-index: 1000;
 }
 
 a {
