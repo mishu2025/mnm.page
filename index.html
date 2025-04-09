@@ -3,79 +3,89 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr.-Ing. Computational Engineer</title>
+  <title>Dr.-Ing. | Simulation & AI</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Dr.-Ing. Computational Engineer</h1>
-    <p>18+ years in Simulation, Automation, and Method Development</p>
+    <p>FE-Simulation | AI & ML | Automotive | Aviation</p>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="#" onclick="showSection('home')">Home</a></li>
+        <li><a href="#" onclick="showSection('fe')">FE-Simulation</a></li>
+        <li><a href="#" onclick="showSection('ml')">ML & AI</a></li>
+        <li><a href="#" onclick="showSection('auto')">Automotive</a></li>
+        <li><a href="#" onclick="showSection('aviation')">Aviation</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
-    <section>
-      <h2>Professional Summary</h2>
-      <p>Experienced Computational Engineer with 18 years of expertise in FE simulation, Test, and Method Development. Skilled in process automation, pre/solver/post-process method development. Proven track record simulating complex systems for the automotive and aerospace industries. Extensive experience in developing material methods integrated into the Abaqus solver and damper element behavior characterization in the LSDyna solver. Currently expanding expertise in AI-driven method development. Seeking to leverage expertise in a challenging new role.</p>
+    <!-- Sections -->
+    <section id="home" class="content-section">
+      <h2>Welcome</h2>
+      <p>Experienced Computational Engineer with expertise in FE Simulation, AI-driven method development, and cross-industry solutions for Automotive and Aerospace.</p>
+      <p>Explore the areas of interest to learn more about my work, thoughts, and resources I find valuable.</p>
     </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <h3>Bertrandt Simulation GmbH, Hamburg (02/2012 – Present)</h3>
+    <section id="fe" class="content-section hidden">
+      <h2>FE-Simulation</h2>
+      <p>I specialize in method development, process automation, and multi-physics simulation using Abaqus, LSDyna, and more.</p>
       <ul>
-        <li>Method development & automation for FE processes (Pre/Solver/Post)</li>
-        <li>Interior simulation: Dashboards, consoles, safety systems (VW ID.4, Golf, Passat...)</li>
-        <li>Aircraft structures: Airbus A350, A320</li>
-        <li>Other clients: Rheinmetall, Porsche, EVAC, Qualimed, Autoliv</li>
-      </ul>
-
-      <h3>German Aerospace Center, Braunschweig (04/2007 – 08/2007)</h3>
-      <p>Numerical investigation of CFRP shell structures</p>
-
-      <h3>Ethiopian Electric Power Corp. (09/2002 – 09/2004)</h3>
-      <p>Electric tower structural design and inspections</p>
-    </section>
-
-    <section>
-      <h2>Education</h2>
-      <ul>
-        <li><strong>Dr.-Ing.</strong>, Helmholtz-Center-Geesthacht & University of Kiel (2007–2011)</li>
-        <li><strong>M.Sc. Computational Engineering</strong>, TU Braunschweig (2004–2007)</li>
-        <li><strong>B.Sc. Civil Engineering</strong>, Mekelle University (1997–2002)</li>
+        <li>Process Automation with Python (ANSA, Meta, Animator)</li>
+        <li>Structural simulations: CFRP, crash, fasteners</li>
+        <li>🧠 <a href="https://www.3ds.com/products-services/simulia/products/abaqus/" target="_blank">Learn more about Abaqus</a></li>
+        <li>📘 <a href="https://www.dynasupport.com/" target="_blank">LSDyna Support</a></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Skills</h2>
+    <section id="ml" class="content-section hidden">
+      <h2>ML & AI</h2>
+      <p>Currently exploring how AI and ML can improve simulation speed, accuracy, and automation.</p>
       <ul>
-        <li><strong>FE Solvers:</strong> Pamcrash, Abaqus, LSDyna, Nastran</li>
-        <li><strong>Pre/Post:</strong> ANSA, Hypermesh, Animator, Meta</li>
-        <li><strong>Programming:</strong> Python, C/C++, C#, Fortran, VBA, JavaScript</li>
-        <li><strong>Tools:</strong> MATLAB, MATHEMATICA, ISAMI, Linux/Windows</li>
-        <li><strong>AI/ML:</strong> Applying ML to simulation and automation workflows</li>
+        <li>Machine Learning for material behavior prediction</li>
+        <li>AI-driven pre/post processing</li>
+        <li>📚 <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Stanford ML Course</a></li>
+        <li>🛠️ <a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Certifications</h2>
+    <section id="auto" class="content-section hidden">
+      <h2>Automotive Industry</h2>
+      <p>Hands-on experience with safety systems, dashboards, and electric vehicle development for major OEMs.</p>
       <ul>
-        <li>Machine Learning – Stanford (Coursera, 2017)</li>
-        <li>Google Cloud Application Development (Coursera, 2018)</li>
-        <li>Upcoming (2025): AI-driven Method Dev, Deep Learning in Simulation</li>
+        <li>Simulation for VW ID.4, Golf, Passat, Porsche projects</li>
+        <li>Crash safety and airbag integration</li>
+        <li>🔗 <a href="https://www.volkswagenag.com/en/group.html" target="_blank">Volkswagen Group</a></li>
+        <li>🔗 <a href="https://www.porsche.com/" target="_blank">Porsche</a></li>
       </ul>
     </section>
 
-    <section>
-      <h2>Languages</h2>
+    <section id="aviation" class="content-section hidden">
+      <h2>Aviation</h2>
+      <p>FE Analysis for primary and secondary aircraft structures, with experience in Airbus A350 and A320 components.</p>
       <ul>
-        <li>German – Very Good</li>
-        <li>English – Fluent</li>
-        <li>Amharic – Native</li>
+        <li>Thin-walled CFRP analysis (DLR)</li>
+        <li>Simulation for Airbus fuselage structures</li>
+        <li>🌍 <a href="https://www.airbus.com/" target="_blank">Airbus</a></li>
+        <li>🔬 <a href="https://www.dlr.de/" target="_blank">DLR – German Aerospace Center</a></li>
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Dr.-Ing. Computational Engineer</p>
+    <p>© 2025 Dr.-Ing. | Built with ❤️ and Python logic</p>
   </footer>
+
+  <script>
+    function showSection(sectionId) {
+      const sections = document.querySelectorAll(".content-section");
+      sections.forEach(section => {
+        section.classList.add("hidden");
+      });
+      document.getElementById(sectionId).classList.remove("hidden");
+    }
+  </script>
 </body>
 </html>
