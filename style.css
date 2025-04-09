@@ -34,6 +34,11 @@ main {
   margin: 0 auto;
   min-height: calc(100vh - 80px); /* Adjust footer height accordingly */
   padding-bottom: 80px; /* Prevents content from being blocked by the footer */
+  position: relative;
+}
+
+main .content-placeholder {
+  height: 1%; /* This will create a small space at the bottom */
 }
 
 section#ml-ai {
