@@ -35,17 +35,20 @@ header {
   margin-bottom: 1.5rem;
 }
 
+/* Navigation Section at the top of the page */
+.nav-section {
+  background-color: #2980b9;
+  padding: 1rem 0;
+}
+
 nav {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  text-align: center; /* Center align the navigation links */
 }
 
 .nav-links {
   list-style: none;
-  display: flex;
-  gap: 2rem;
+  display: inline-flex; /* Align items horizontally */
+  gap: 2rem; /* Space between links */
 }
 
 .nav-links li {
