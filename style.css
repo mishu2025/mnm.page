@@ -69,7 +69,7 @@ ul.styled-list li {
 }
 
 ul.styled-list li:before {
-  content: '✔️';
+  content: '✔';
   position: absolute;
   left: 0;
   color: #2980b9;
