@@ -1,27 +1,77 @@
-/* Add to your existing CSS */
-.nav-links {
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #2980b9;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 0.5rem;
+}
+
+main {
+  padding: 20px;
+}
+
+nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 0;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 20px;
 }
 
-.nav-links li a {
+nav a {
   text-decoration: none;
-  font-weight: bold;
   color: #2980b9;
-  transition: color 0.2s ease-in-out;
+  font-weight: bold;
 }
 
-.nav-links li a:hover {
+nav a:hover {
   color: #1a5276;
 }
 
-.hidden {
-  display: none;
+footer {
+  background-color: #2980b9;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.content-section {
-  margin-top: 2rem;
+section {
+  margin-bottom: 2rem;
+}
+
+ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #2980b9;
+}
+
+a:hover {
+  color: #1a5276;
 }
