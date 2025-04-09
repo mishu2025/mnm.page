@@ -29,7 +29,7 @@ main {
   margin: 0 auto;
 }
 
-section#fe-simulation {
+section#ml-ai {
   margin-bottom: 2rem;
 }
 
@@ -80,7 +80,7 @@ ul.styled-list li:last-child {
   margin-bottom: 2rem;
 }
 
-.overview, .fe-concepts, .importance, .fe-methods {
+.overview, .ai-algorithms, .resources {
   padding: 2rem;
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -89,7 +89,7 @@ ul.styled-list li:last-child {
   transition: transform 0.3s ease-in-out;
 }
 
-.overview:hover, .fe-concepts:hover, .importance:hover, .fe-methods:hover {
+.overview:hover, .ai-algorithms:hover, .resources:hover {
   transform: translateY(-10px);
 }
 
