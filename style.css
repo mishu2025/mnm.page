@@ -116,23 +116,24 @@ a:hover {
 .top-nav {
   margin-top: 10px;
   text-align: right;
+  padding-right: 20px;
 }
 
 .home-link {
   font-weight: bold;
   text-decoration: none;
-  color: #0077cc;
-  background-color: #f0f8ff;
-  padding: 8px 12px;
+  color: #ffffff; /* white text */
+  background-color: #0077cc; /* bold blue background */
+  padding: 8px 14px;
   border-radius: 6px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .home-link:hover {
-  background-color: #e6f0ff;
-  color: #005fa3;
+  background-color: #005fa3; /* darker blue on hover */
+  color: #ffffff;
 }
-
 
 @keyframes fadeIn {
   from {
