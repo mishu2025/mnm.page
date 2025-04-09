@@ -113,6 +113,27 @@ a:hover {
   text-decoration: underline;
 }
 
+.top-nav {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.home-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: #0077cc;
+  background-color: #f0f8ff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #e6f0ff;
+  color: #005fa3;
+}
+
+
 @keyframes fadeIn {
   from {
     opacity: 0;
