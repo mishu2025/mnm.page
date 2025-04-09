@@ -35,8 +35,8 @@ header {
   margin-bottom: 1.5rem;
 }
 
-/* Navigation Section at the top of the page */
-.nav-section {
+/* Horizontal navigation bar at the top */
+.top-nav {
   background-color: #2980b9;
   padding: 1rem 0;
 }
