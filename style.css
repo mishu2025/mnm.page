@@ -20,12 +20,49 @@ body, html {
 header {
   background-color: #2980b9;
   color: white;
-  padding: 1.5rem;
+  padding: 2rem;
   text-align: center;
+  position: relative;
 }
 
-h1 {
+.header-content h1 {
+  font-size: 2.5rem;
   margin-bottom: 0.5rem;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+nav {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
 }
 
 main {
@@ -34,32 +71,12 @@ main {
   margin: 0 auto;
   min-height: calc(100vh - 80px); /* Adjust footer height accordingly */
   padding-bottom: 80px; /* Prevents content from being blocked by the footer */
-  position: relative;
-}
-
-main .content-placeholder {
-  height: 1%; /* This will create a small space at the bottom */
-}
-
-section#ml-ai {
-  margin-bottom: 2rem;
-}
-
-.section-header {
-  margin-bottom: 1.5rem;
-  animation: fadeIn 1s ease-out;
 }
 
 h2 {
   font-size: 2rem;
   color: #2980b9;
-}
-
-h3 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  color: #1a5276;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -67,42 +84,8 @@ p {
   font-size: 1.1rem;
 }
 
-ul.styled-list {
-  list-style-type: none;
-  padding-left: 0;
-  margin-bottom: 1rem;
-}
-
-ul.styled-list li {
-  padding-left: 1.5rem;
-  position: relative;
-  margin-bottom: 0.8rem;
-  font-size: 1.1rem;
-}
-
-ul.styled-list li:before {
-  content: '✔';
-  position: absolute;
-  left: 0;
-  color: #2980b9;
-  font-size: 1.5rem;
-}
-
-ul.styled-list li:last-child {
-  margin-bottom: 2rem;
-}
-
-.about-details, .skills, .aviation-innovations, .fe-concepts, .importance, .fe-methods, .ai-algorithms, .overview, .resources {
-  padding: 2rem;
-  background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  margin-bottom: 2rem;
-  border-radius: 8px;
-  transition: transform 0.3s ease-in-out;
-}
-
-.about-details:hover, .skills:hover, .aviation-innovations:hover, .fe-concepts:hover, .importance:hover, .fe-methods:hover, .ai-algorithms:hover, .overview:hover, .resources:hover {
-  transform: translateY(-10px);
+.content-placeholder {
+  height: 1%;
 }
 
 footer {
@@ -113,7 +96,6 @@ footer {
   color: white;
   text-align: center;
   padding: 10px 0;
-  z-index: 1000;
 }
 
 a {
@@ -124,35 +106,4 @@ a {
 a:hover {
   color: #1a5276;
   text-decoration: underline;
-}
-
-.top-nav {
-  margin-top: 10px;
-  text-align: right;
-  padding-right: 20px;
-}
-
-.home-link {
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff; /* white text */
-  background-color: #0077cc; /* bold blue background */
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: background-color 0.3s ease, color 0.3s ease;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.home-link:hover {
-  background-color: #005fa3; /* darker blue on hover */
-  color: #ffffff;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
