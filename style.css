@@ -28,6 +28,50 @@ h1 {
   margin-bottom: 0.5rem;
 }
 
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.header-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Horizontal navigation bar at the top */
+.top-nav {
+  background-color: #2980b9;
+  padding: 1rem 0;
+}
+
+nav {
+  text-align: center; /* Center align the navigation links */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex; /* Change from inline-flex to flex to create columns */
+  justify-content: center; /* Centers the links horizontally */
+  gap: 2rem; /* Space between links */
+}
+
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #f39c12;
+}
+
 main {
   padding: 20px;
   max-width: 800px;
