@@ -40,7 +40,7 @@ h1 {
 
 /* Horizontal navigation bar at the top */
 .top-nav {
-  background-color: #2980b9;
+  background-color: #dcdcdc; /*#2980b9;*/
   padding: 1rem 0;
 }
 
