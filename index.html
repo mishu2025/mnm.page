@@ -3,89 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dr.-Ing. | Simulation & AI</title>
+  <title>Dr.-Ing. | Computational Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
     <h1>Dr.-Ing. Computational Engineer</h1>
     <p>FE-Simulation | AI & ML | Automotive | Aviation</p>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="#" onclick="showSection('home')">Home</a></li>
-        <li><a href="#" onclick="showSection('fe')">FE-Simulation</a></li>
-        <li><a href="#" onclick="showSection('ml')">ML & AI</a></li>
-        <li><a href="#" onclick="showSection('auto')">Automotive</a></li>
-        <li><a href="#" onclick="showSection('aviation')">Aviation</a></li>
-      </ul>
-    </nav>
   </header>
 
   <main>
-    <!-- Sections -->
-    <section id="home" class="content-section">
+    <section id="home">
       <h2>Welcome</h2>
       <p>Experienced Computational Engineer with expertise in FE Simulation, AI-driven method development, and cross-industry solutions for Automotive and Aerospace.</p>
-      <p>Explore the areas of interest to learn more about my work, thoughts, and resources I find valuable.</p>
-    </section>
-
-    <section id="fe" class="content-section hidden">
-      <h2>FE-Simulation</h2>
-      <p>I specialize in method development, process automation, and multi-physics simulation using Abaqus, LSDyna, and more.</p>
-      <ul>
-        <li>Process Automation with Python (ANSA, Meta, Animator)</li>
-        <li>Structural simulations: CFRP, crash, fasteners</li>
-        <li>🧠 <a href="https://www.3ds.com/products-services/simulia/products/abaqus/" target="_blank">Learn more about Abaqus</a></li>
-        <li>📘 <a href="https://www.dynasupport.com/" target="_blank">LSDyna Support</a></li>
-      </ul>
-    </section>
-
-    <section id="ml" class="content-section hidden">
-      <h2>ML & AI</h2>
-      <p>Currently exploring how AI and ML can improve simulation speed, accuracy, and automation.</p>
-      <ul>
-        <li>Machine Learning for material behavior prediction</li>
-        <li>AI-driven pre/post processing</li>
-        <li>📚 <a href="https://www.coursera.org/learn/machine-learning" target="_blank">Stanford ML Course</a></li>
-        <li>🛠️ <a href="https://scikit-learn.org/stable/" target="_blank">scikit-learn</a></li>
-      </ul>
-    </section>
-
-    <section id="auto" class="content-section hidden">
-      <h2>Automotive Industry</h2>
-      <p>Hands-on experience with safety systems, dashboards, and electric vehicle development for major OEMs.</p>
-      <ul>
-        <li>Simulation for VW ID.4, Golf, Passat, Porsche projects</li>
-        <li>Crash safety and airbag integration</li>
-        <li>🔗 <a href="https://www.volkswagenag.com/en/group.html" target="_blank">Volkswagen Group</a></li>
-        <li>🔗 <a href="https://www.porsche.com/" target="_blank">Porsche</a></li>
-      </ul>
-    </section>
-
-    <section id="aviation" class="content-section hidden">
-      <h2>Aviation</h2>
-      <p>FE Analysis for primary and secondary aircraft structures, with experience in Airbus A350 and A320 components.</p>
-      <ul>
-        <li>Thin-walled CFRP analysis (DLR)</li>
-        <li>Simulation for Airbus fuselage structures</li>
-        <li>🌍 <a href="https://www.airbus.com/" target="_blank">Airbus</a></li>
-        <li>🔬 <a href="https://www.dlr.de/" target="_blank">DLR – German Aerospace Center</a></li>
-      </ul>
+      <p>Explore the areas of interest below to learn more about my work, thoughts, and resources I find valuable:</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="fe-simulation.html">FE-Simulation</a></li>
+          <li><a href="ml-ai.html">ML & AI</a></li>
+          <li><a href="automotive.html">Automotive Industry</a></li>
+          <li><a href="aviation.html">Aviation</a></li>
+          <li><a href="about-me.html">About Me</a></li>
+        </ul>
+      </nav>
     </section>
   </main>
 
   <footer>
     <p>© 2025 Dr.-Ing. | Built with ❤️ and Python logic</p>
   </footer>
-
-  <script>
-    function showSection(sectionId) {
-      const sections = document.querySelectorAll(".content-section");
-      sections.forEach(section => {
-        section.classList.add("hidden");
-      });
-      document.getElementById(sectionId).classList.remove("hidden");
-    }
-  </script>
 </body>
 </html>
