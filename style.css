@@ -12,6 +12,11 @@ body {
   line-height: 1.6;
 }
 
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
 header {
   background-color: #2980b9;
   color: white;
@@ -27,6 +32,8 @@ main {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
+  min-height: calc(100vh - 80px); /* Adjust footer height accordingly */
+  padding-bottom: 80px; /* Prevents content from being blocked by the footer */
 }
 
 section#ml-ai {
@@ -91,16 +98,6 @@ ul.styled-list li:last-child {
 
 .about-details:hover, .skills:hover, .aviation-innovations:hover, .fe-concepts:hover, .importance:hover, .fe-methods:hover, .ai-algorithms:hover, .overview:hover, .resources:hover {
   transform: translateY(-10px);
-}
-
-footer_ {
-  background-color: #2980b9;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
 }
 
 footer {
