@@ -47,7 +47,8 @@ nav {
 
 .nav-links {
   list-style: none;
-  display: inline-flex; /* Align items horizontally */
+  display: flex; /* Change from inline-flex to flex to create columns */
+  justify-content: center; /* Centers the links horizontally */
   gap: 2rem; /* Space between links */
 }
 
