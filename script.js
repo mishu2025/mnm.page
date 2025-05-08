@@ -2,62 +2,83 @@ const EMPTY = 0, X = 1, O = -1;
 let board = Array(9).fill(EMPTY);
 let gameOver = false;
 
+// Create board buttons
+const boardContainer = document.getElementById("game-board");
+const messageElem = document.getElementById("game-message");
+const resetBtn = document.getElementById("reset-btn");
+
 function renderBoard() {
-  const container = document.getElementById("game-board");
-  container.innerHTML = "";
+  boardContainer.innerHTML = '';
   board.forEach((val, idx) => {
-    const cell = document.createElement("div");
-    cell.className = "cell";
-    cell.textContent = val === X ? "X" : val === O ? "O" : "";
-    cell.onclick = () => handleClick(idx);
-    container.appendChild(cell);
+    const btn = document.createElement("button");
+    btn.textContent = val === X ? "X" : val === O ? "O" : "";
+    btn.disabled = val !== EMPTY || gameOver;
+    btn.addEventListener("click", () => userMove(idx));
+    boardContainer.appendChild(btn);
   });
 }
 
-function handleClick(index) {
+function userMove(index) {
   if (board[index] !== EMPTY || gameOver) return;
   board[index] = O;
   renderBoard();
-  const winner = checkWinner(board);
-  if (winner !== null) return endGame(winner);
-  setTimeout(agentTurn, 200);
+
+  let result = checkWinner();
+  if (result) return endGame(result);
+
+  setTimeout(agentMove, 300);
 }
 
-function agentTurn() {
-  const stateKey = boardToKey(board);
-  const move = getAction(stateKey, board);
-  if (move === null) return endGame("draw");
+function agentMove() {
+  const validMoves = board
+    .map((val, idx) => val === EMPTY ? idx : null)
+    .filter(idx => idx !== null);
+
+  if (validMoves.length === 0) return;
+
+  const move = validMoves[Math.floor(Math.random() * validMoves.length)];
   board[move] = X;
   renderBoard();
-  const winner = checkWinner(board);
-  if (winner !== null) endGame(winner);
+
+  let result = checkWinner();
+  if (result) return endGame(result);
+}
+
+function checkWinner() {
+  const lines = [
+    [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+    [0, 3, 6], [1, 4, 7], [2, 5, 8], // Cols
+    [0, 4, 8], [2, 4, 6]             // Diagonals
+  ];
+
+  for (let [a, b, c] of lines) {
+    if (board[a] !== EMPTY && board[a] === board[b] && board[a] === board[c]) {
+      return board[a];
+    }
+  }
+
+  return board.includes(EMPTY) ? null : 'draw';
 }
 
 function endGame(result) {
   gameOver = true;
-  const status = document.getElementById("game-status");
-  status.textContent = result === "draw" ? "It's a draw!" : result === X ? "Agent (X) wins!" : "You (O) win!";
+  if (result === X) {
+    messageElem.textContent = "Agent (X) wins!";
+  } else if (result === O) {
+    messageElem.textContent = "You (O) win!";
+  } else {
+    messageElem.textContent = "It's a draw!";
+  }
 }
 
 function resetGame() {
   board = Array(9).fill(EMPTY);
   gameOver = false;
-  document.getElementById("game-status").textContent = "";
+  messageElem.textContent = "Your turn (O)";
   renderBoard();
 }
 
-function checkWinner(b) {
-  const lines = [
-    [0,1,2], [3,4,5], [6,7,8],
-    [0,3,6], [1,4,7], [2,5,8],
-    [0,4,8], [2,4,6]
-  ];
-  for (let [a,b,c] of lines) {
-    if (board[a] !== EMPTY && board[a] === board[b] && board[b] === board[c]) {
-      return board[a];
-    }
-  }
-  return board.includes(EMPTY) ? null : "draw";
-}
+resetBtn.addEventListener("click", resetGame);
 
-window.onload = renderBoard;
+// Initial render
+renderBoard();
