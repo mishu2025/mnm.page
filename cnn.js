@@ -1,7 +1,7 @@
 let model, canvas, ctx, isDrawing = false;
 
 async function loadModel() {
-  model = await tf.loadLayersModel('model/model.json');
+  model = await tf.loadLayersModel('cnn_model.json');
   console.log("CNN model loaded.");
 }
 
