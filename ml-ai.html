@@ -81,6 +81,42 @@
     </div>
     
     <div class="content-placeholder"></div>
+
+
+    <div class="section-header">
+      <h2>XOR Neural Network Demo (TensorFlow.js)</h2>
+    </div>
+    <p>Click a pair of binary inputs to see the predicted output from a simple neural network.</p>
+      
+    <div id="xor-inputs">
+      <button onclick="predictXOR(0, 0)">0 XOR 0</button>
+      <button onclick="predictXOR(0, 1)">0 XOR 1</button>
+      <button onclick="predictXOR(1, 0)">1 XOR 0</button>
+      <button onclick="predictXOR(1, 1)">1 XOR 1</button>
+    </div>
+  
+    <h2>Prediction: <span id="prediction">?</span></h2>
+  
+    <script src="xor.js"></script>
+
+    <div class="content-placeholder"></div>
+
+    <div class="section-header">
+      <h2>CNN Digit Recognition Demo</h2>
+    </div>
+    <p>Draw a Digit (0–9)</p>
+  
+    <div class="cnn-container">
+      <canvas id="canvas" width="280" height="280"></canvas>
+      <div class="cnn-controls">
+        <button onclick="predictDigit()">Predict</button>
+        <button onclick="clearCanvas()">Clear</button>
+        <h2>Prediction: <span id="digit-prediction">?</span></h2>
+      </div>
+    </div>
+
+    <script src="cnn.js"></script>
+    <div class="content-placeholder"></div>
     
   </main>
 
