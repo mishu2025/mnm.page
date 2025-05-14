@@ -81,23 +81,18 @@
     </div>
     
     <div class="content-placeholder"></div>
-
-
-    <div class="section-header">
-      <h2>XOR Neural Network Demo (TensorFlow.js)</h2>
-    </div>
-    <p>Click a pair of binary inputs to see the predicted output from a simple neural network.</p>
       
-    <div id="xor-inputs">
-      <button onclick="predictXOR(0, 0)">0 XOR 0</button>
-      <button onclick="predictXOR(0, 1)">0 XOR 1</button>
-      <button onclick="predictXOR(1, 0)">1 XOR 0</button>
-      <button onclick="predictXOR(1, 1)">1 XOR 1</button>
+    <div class="section-header">
+      <h2>XOR Neural Network Demo</h2>
     </div>
-  
-    <h2>Prediction: <span id="prediction">?</span></h2>
-  
-    <script src="xor.js"></script>
+    <button onclick="trainAndSaveModel()">Train Model (Dev Only)</button>
+    <button onclick="loadAndPredict()">Predict Using Pre-trained Model</button>
+    <p id="output"></p>
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0"></script>
+    <script src="js/trainModel.js"></script>
+    <script src="js/predictModel.js"></script>
+
 
     <div class="content-placeholder"></div>
 
