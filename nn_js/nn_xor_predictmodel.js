@@ -16,6 +16,6 @@ async function loadAndPredict() {
   const prediction = outputTensor.dataSync()[0];
 
   document.getElementById('output').innerText =
-    `Prediction for [${input1}, ${input2}] is ${prediction.toFixed(4)}`;
+    'Prediction for [${input1}, ${input2}] is ${prediction.toFixed(4)}';
 }
 
