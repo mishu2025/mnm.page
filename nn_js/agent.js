@@ -2,7 +2,7 @@ let Q_table = {};
 const epsilon = 0.0; // No exploration in browser
 
 // Load Q-table from JSON file
-fetch("q_table.json")
+fetch("../models/q_table.json")
   .then((res) => res.json())
   .then((data) => {
     Q_table = data;
