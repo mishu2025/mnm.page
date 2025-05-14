@@ -1,10 +1,19 @@
 async function loadAndPredict() {
+  const input1 = parseFloat(document.getElementById('input1').value);
+  const input2 = parseFloat(document.getElementById('input2').value);
+
+  if (isNaN(input1) || isNaN(input2)) {
+    document.getElementById('output').innerText = 'Please enter valid numbers.';
+    return;
+  }
+
   const model = await tf.loadLayersModel('models/xor-model.json'); // hosted version
-  // or: const model = await tf.loadLayersModel('localstorage://xor-model');
 
-  const input = tf.tensor2d([[0, 1]]); // XOR input
-  const output = model.predict(input);
-  const prediction = output.dataSync()[0];
+  const inputTensor = tf.tensor2d([[input1, input2]]);
+  const outputTensor = model.predict(inputTensor);
+  const prediction = outputTensor.dataSync()[0];
 
-  document.getElementById('output').innerText = `Prediction for [0,1]: ${prediction.toFixed(2)}`;
+  document.getElementById('output').innerText =
+    `Prediction for [${input1}, ${input2}] is ${prediction.toFixed(4)}`;
 }
+
