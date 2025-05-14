@@ -1,5 +1,5 @@
 async function loadAndPredict() {
-  const model = await tf.loadLayersModel('models/model.json'); // hosted version
+  const model = await tf.loadLayersModel('models/xor-model.json'); // hosted version
   // or: const model = await tf.loadLayersModel('localstorage://xor-model');
 
   const input = tf.tensor2d([[0, 1]]); // XOR input
