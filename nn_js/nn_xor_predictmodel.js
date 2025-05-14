@@ -8,7 +8,7 @@ async function loadAndPredict() {
   };
 
   document.getElementById('output').innerText = 'Loading model...';
-  const model = await tf.loadLayersModel('../models/xor-model.json'); // hosted version
+  const model = await tf.loadLayersModel('models/xor-model.json'); // hosted version
   document.getElementById('output').innerText = 'Model Loaded';
 
   const inputTensor = tf.tensor2d([[input1, input2]]);
@@ -16,6 +16,6 @@ async function loadAndPredict() {
   const prediction = outputTensor.dataSync()[0];
 
   document.getElementById('output').innerText =
-    'Prediction for [${input1}, ${input2}] is ${prediction.toFixed(4)}';
+    `Prediction for [${input1}, ${input2}] is ${prediction.toFixed(4)}`;
 }
 
