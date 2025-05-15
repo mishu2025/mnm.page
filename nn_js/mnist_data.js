@@ -73,14 +73,15 @@ class MnistData {
   }
 
   getTrainData() {
-    const xs = tf.tensor2d(this.trainImages, [NUM_TRAIN_ELEMENTS, IMAGE_SIZE]);
+    const xs = tf.tensor4d(this.trainImages, [NUM_TRAIN_ELEMENTS, 28, 28, 1]);
     const labels = tf.tensor2d(this.trainLabels, [NUM_TRAIN_ELEMENTS, NUM_CLASSES]);
-    return {xs, labels};
+    return { xs, labels };
+  }
+  
+  getTestData() {
+    const xs = tf.tensor4d(this.testImages, [NUM_TEST_ELEMENTS, 28, 28, 1]);
+    const labels = tf.tensor2d(this.testLabels, [NUM_TEST_ELEMENTS, NUM_CLASSES]);
+    return { xs, labels };
   }
 
-  getTestData() {
-    const xs = tf.tensor2d(this.testImages, [NUM_TEST_ELEMENTS, IMAGE_SIZE]);
-    const labels = tf.tensor2d(this.testLabels, [NUM_TEST_ELEMENTS, NUM_CLASSES]);
-    return {xs, labels};
-  }
 }
