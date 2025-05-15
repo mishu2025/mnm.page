@@ -35,3 +35,21 @@ class MnistData {
     return { xs, ys };
   }
 }
+
+async function loadMnistData() {
+  const mnist = require('mnist'); // Ensure you have the 'mnist' package installed
+  const set = mnist.set(8000, 2000);
+
+  const trainingSet = set.training;
+  const testSet = set.test;
+
+  // Convert data to tensors
+  const trainXs = tf.tensor2d(trainingSet.map(item => item.input));
+  const trainYs = tf.tensor2d(trainingSet.map(item => item.output));
+
+  const testXs = tf.tensor2d(testSet.map(item => item.input));
+  const testYs = tf.tensor2d(testSet.map(item => item.output));
+
+  return { trainXs, trainYs, testXs, testYs };
+}
+
