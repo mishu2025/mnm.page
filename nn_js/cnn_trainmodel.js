@@ -26,7 +26,7 @@ async function trainCNNModel() {
   const trainXs = trainXsFull.slice([0, 0, 0], [NUM_SAMPLES, 28, 28, 1]);
   const trainYs = trainYsFull.slice([0, 0], [NUM_SAMPLES, 10]);
 
-  await model.fit(trainXs, trainYs, {
+  await model.fit(trainXsFull, trainYsFull, {
     epochs: 5,
     batchSize: 64,
     validationSplit: 0.1,
