@@ -62,8 +62,6 @@
           <li><a href="https://www.linkedin.com/feed/update/urn:li:activity:7326178069629517825?utm_source=share&utm_medium=member_desktop&rcm=ACoAAAmEG-kB-0vsZIgcqNskIZQxyuc8TqiegJY" target="_blank"><strong>Deep-Learning</strong></a>: The Little Book of Deep Learning</li>
         </ul>
       </div>
-
-    </section>
     
     <div class="demo-rnn">
       <div class="section-header">
@@ -82,30 +80,31 @@
     
     <div class="demo-xor-nn">
       
-    <div class="section-header">
-      <h2>XOR Neural Network Demo</h2>
+      <div class="section-header">
+        <h2>XOR Neural Network Demo</h2>
+      </div>
+      <button onclick="trainAndSaveModel()">Train Model (Dev Only)</button>
+      
+      <div class="content-placeholder"></div>
+  
+      <!-- Prediction UI -->
+      <label for="input1">Input 1:</label>
+      <input type="number" id="input1" min="0" max="1" value="0">
+      <label for="input2">Input 2:</label>
+      <input type="number" id="input2" min="0" max="1" value="1">
+  
+      <div class="content-placeholder"></div>
+      
+      <button onclick="loadAndPredict()">Predict Using Pre-trained Model</button>
+      
+      <p id="output">Model not yet run.</p>
+      
+      <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0"></script>
+      <script src="nn_js/nn_xor_trainmodel.js"></script>
+      <script src="nn_js/nn_xor_predictmodel.js"></script>
+
     </div>
-    <button onclick="trainAndSaveModel()">Train Model (Dev Only)</button>
     
-    <div class="content-placeholder"></div>
-
-    <!-- Prediction UI -->
-    <label for="input1">Input 1:</label>
-    <input type="number" id="input1" min="0" max="1" value="0">
-    <label for="input2">Input 2:</label>
-    <input type="number" id="input2" min="0" max="1" value="1">
-
-    <div class="content-placeholder"></div>
-    
-    <button onclick="loadAndPredict()">Predict Using Pre-trained Model</button>
-    
-    <p id="output">Model not yet run.</p>
-    
-    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0"></script>
-    <script src="nn_js/nn_xor_trainmodel.js"></script>
-    <script src="nn_js/nn_xor_predictmodel.js"></script>
-
-    </div>
     <div class="demo-cnn">
 
       <div class="section-header">
@@ -123,6 +122,7 @@
       </div>
     </div>
 
+    </section>
     <script src="nn_js/cnn.js"></script>
     <div class="content-placeholder"></div>
     
