@@ -113,17 +113,23 @@
       <p>Draw a Digit (0–9)</p>
     
       <div class="cnn-container">
-        <canvas id="canvas" width="280" height="280"></canvas>
-        <div class="cnn-controls">
-          <button onclick="predictDigit()">Predict</button>
-          <button onclick="clearCanvas()">Clear</button>
-          <h2>Prediction: <span id="digit-prediction">?</span></h2>
-        </div>
+        
+        <button onclick="trainCNNModel()">Train & Save CNN Model</button>
+        
+        <canvas id="digit-canvas" width="28" height="28" style="border:1px solid;"></canvas>
+        <br>
+        <button onclick="predictFromCanvas()">Predict Digit</button>
+        <p id="cnn-output">Draw a digit above.</p>
+        
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.12.0"></script>
+        <script src="nn_js/mnist_data.js"></script>
+        <script src="nn_js/cnn_trainmodel.js"></script>
+        <script src="nn_js/cnn_predictmodel.js"></script>
       </div>
+
     </div>
 
     </section>
-    <script src="nn_js/cnn.js"></script>
     <div class="content-placeholder"></div>
     
   </main>
