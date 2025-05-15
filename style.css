@@ -136,7 +136,7 @@ ul.styled-list li:last-child {
   margin-bottom: 2rem;
 }
 
-.about-details, .skills, .aviation-innovations, .fe-concepts, .importance, .fe-methods, .ai-algorithms, .overview, .resources, .demo {
+.about-details, .skills, .aviation-innovations, .fe-concepts, .importance, .fe-methods, .ai-algorithms, .overview, .resources, .demo-rnn, .demo-cnn, .demo-xor-nn {
   padding: 2rem;
   background-color: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -145,7 +145,7 @@ ul.styled-list li:last-child {
   transition: transform 0.3s ease-in-out;
 }
 
-.about-details:hover, .skills:hover, .aviation-innovations:hover, .fe-concepts:hover, .importance:hover, .fe-methods:hover, .ai-algorithms:hover, .overview:hover, .resources:hover {
+.about-details:hover, .skills:hover, .aviation-innovations:hover, .fe-concepts:hover, .importance:hover, .fe-methods:hover, .ai-algorithms:hover, .overview:hover, .resources:hover, .demo-rnn:hover, .demo-cnn:hover, .demo-xor-nn:hover {
   transform: translateY(-10px);
 }
 
