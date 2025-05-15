@@ -1,4 +1,4 @@
-import * as tf from '@tensorflow/tfjs';
+//import * as tf from '@tensorflow/tfjs';
 
 const IMAGE_SIZE = 784;
 const NUM_CLASSES = 10;
