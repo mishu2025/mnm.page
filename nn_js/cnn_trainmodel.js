@@ -23,8 +23,8 @@ async function trainCNNModel() {
   const { xs: testXs, labels: testYs } = data.getTestData();
   
   const NUM_SAMPLES = 1000;
-  const trainXs = trainXsFull.slice(0, NUM_SAMPLES);
-  const trainYs = trainYsFull.slice(0, NUM_SAMPLES);
+  const trainXs = trainXsFull.slice([0, 0, 0], [NUM_SAMPLES, 28, 28, 1]);
+  const trainYs = trainYsFull.slice([0, 0], [NUM_SAMPLES, 10]);
 
   await model.fit(trainXs, trainYs, {
     epochs: 5,
