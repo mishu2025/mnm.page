@@ -17,10 +17,11 @@ async function trainCNNModel() {
     metrics: ['accuracy']
   });
 
-  const mnist = new MnistData();
-  await mnist.load();
+  const data = new MnistData();
+  await data.load();
+  const {xs: trainXs, labels: trainYs} = data.getTrainData();
+  const {xs: testXs, labels: testYs} = data.getTestData();
 
-  const { xs, ys } = mnist.getTrainData(1000); // small sample for speed
 
   await model.fit(xs, ys, {
     epochs: 5,
