@@ -28,5 +28,6 @@
   function clearCanvas() {
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+    document.getElementById('cnn-output').innerText = `Predicted Digit: -`;
   }
 
