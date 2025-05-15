@@ -19,16 +19,20 @@ async function trainCNNModel() {
 
   const data = new MnistData();
   await data.load();
-  const {xs: trainXs, labels: trainYs} = data.getTrainData();
-  const {xs: testXs, labels: testYs} = data.getTestData();
+  const { xs: trainXsFull, labels: trainYsFull } = data.getTrainData();
+  const { xs: testXs, labels: testYs } = data.getTestData();
+  
+  const NUM_SAMPLES = 1000;
+  const trainXs = trainXsFull.slice(0, NUM_SAMPLES);
+  const trainYs = trainYsFull.slice(0, NUM_SAMPLES);
 
-
-  await model.fit(xs, ys, {
+  await model.fit(trainXs, trainYs, {
     epochs: 5,
     batchSize: 64,
     validationSplit: 0.1,
     callbacks: tf.callbacks.earlyStopping({ monitor: 'val_loss', patience: 1 })
   });
+
 
   // Save locally for download — to be hosted later
   await model.save('downloads://cnn-mnist-model');
